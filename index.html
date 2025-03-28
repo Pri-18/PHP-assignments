@@ -1,11 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PHP-assignments</title>
-</head>
-<body>
-    
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PHP assignments</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="form-wrapper">
+        <h1 class="form-heading">Fill out the form</h1>
+        <form action="/form.php" method="post">
+          <label for="fname">First name </label>
+          <input
+            type="text"
+            name="fname"
+            id="fname"
+            required
+            oninput="updateFullname()"
+            required pattern="[a-zA-Z]+"
+            minlength="2"
+            maxlength="20"
+          />
+
+          <label for="lname">Last name </label>
+          <input
+            type="text"
+            name="lname"
+            id="lname"
+            required
+            oninput="updateFullname()"
+            required pattern="[a-zA-Z]+"
+            minlength="2"
+            maxlength="20"
+            />
+
+          <label for="full_name">Full name </label>
+          <input type="text" name="full_name" id="full_name" disabled />
+
+          <label for="img-field">Choose a file </label>
+          <input  type="file" id="img-field" accept="image/*" class="img-input">
+
+          <button type="submit" class="submit-btn">Submit</button>
+        </form>
+      </div>
+    </div>
+  </body>
+
+  <script src="script.js"></script>
 </html>
