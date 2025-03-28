@@ -14,19 +14,18 @@
  * Provides an user's first and last name.
  */
 class User {
-  /**
-   * First name of the user.
-   *
-   * @var string
-   */
-  public $firstName;
 
-  /**
-   * Last name of the user.
+    /**
+   * Constructs a new User object.
    *
-   * @var string
+   * @param string $firstName
+   *      First name of the user
+   * @param string $lastName
+   *       Last name of the user
    */
-  public $lastName;
+
+   public $firstName;
+   public $lastName;
 
   /**
    * Constructs a new User object.
