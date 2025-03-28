@@ -10,7 +10,7 @@
     <div class="container">
       <div class="form-wrapper">
         <h1 class="form-heading">Fill out the form</h1>
-        <form action="/form.php" method="post">
+        <form action="/form.php" method="post" enctype="multipart/form-data">
           <label for="fname">First name </label>
           <input
             type="text"
@@ -39,12 +39,22 @@
           <input type="text" name="full_name" id="full_name" disabled />
 
           <label for="img-field">Choose a file </label>
-          <input  type="file" id="img-field" accept="image/*" class="img-input">
+          
+          <input  type="file" id="img-field" class="img-input" name="file">
 
-          <button type="submit" class="submit-btn">Submit</button>
+          <label for="marks">Enter your marks</label>
+          <textarea id="marks" name="marks" placeholder="Enter your numbers in this format: English|80"></textarea>
+
+          <label for="phone">Enter your number:</label>
+          <input type="text" id="phone" name="phone" pattern="\+91[6-9][0-9]{9}" placeholder="+91XXXXXXXXXX" required>          
+          
+          <label for="email">Enter your email:</label>
+          <input type="text" id="email" name="email" placeholder="abc@gmail.com" required>
+
+          <button type="submit" class="submit-btn" name="submit">Submit</button>
         </form>
       </div>
-    </div>
+    </div>  
   </body>
 
   <script src="script.js"></script>
